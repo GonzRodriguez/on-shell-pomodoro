@@ -1,8 +1,7 @@
 declare let opts: any;
 
-const player = require("play-sound")((opts = {}));
+const player = require("play-sound")(opts = {});
 const spawn = require("child_process").spawn;
-const exec = require("child_process").exec;
 const str = process.argv[2];
 const lastChar = str.slice(-1);
 let time = Number(str.slice(0, -1));
@@ -14,7 +13,7 @@ const timeHandler = () => {
   if (lastChar === "m") return { period: "minutes", time: 60 };
   if (lastChar === "h") return { period: "hours", time: 60 * 60 };
   if (lastChar === "d") return { period: "days", time: 60 * 60 * 24 };
-  if (lastChar === "W") return { period: "weeks", time: 60 * 60 * 24 * 7 };
+  if (lastChar === "w") return { period: "weeks", time: 60 * 60 * 24 * 7 };
   if (lastChar === "x") return { period: "months", time: 60 * 60 * 24 * 7 * 4 };
   return { period: "seconds", time: 1 };
 };

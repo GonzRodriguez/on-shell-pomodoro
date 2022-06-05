@@ -1,6 +1,5 @@
-var player = require("play-sound")((opts = {}));
+var player = require("play-sound")(opts = {});
 var spawn = require("child_process").spawn;
-var exec = require("child_process").exec;
 var str = process.argv[2];
 var lastChar = str.slice(-1);
 var time = Number(str.slice(0, -1));
@@ -15,7 +14,7 @@ var timeHandler = function () {
         return { period: "hours", time: 60 * 60 };
     if (lastChar === "d")
         return { period: "days", time: 60 * 60 * 24 };
-    if (lastChar === "W")
+    if (lastChar === "w")
         return { period: "weeks", time: 60 * 60 * 24 * 7 };
     if (lastChar === "x")
         return { period: "months", time: 60 * 60 * 24 * 7 * 4 };
