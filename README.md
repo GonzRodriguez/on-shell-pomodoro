@@ -40,7 +40,7 @@ node index.js 45m
 ## Run it form anyware in the terminal
 Create an alias to run the file to it's full path
 ```
-alias timer="node C:\Users\[your_local_user]\Desktop\[...]\index.ts"
+alias timer="cd ~ && node \Desktop\[...]\index.js"
 ```
 Run the timer. Don't forget to add the time
 ```

@@ -48,7 +48,7 @@ const secondsIntervalID = setInterval(() => {
 
 const minutesIntervalID = setInterval(() => {
   console.clear();
-  time = time - 1;
+  time = time ++;
   if (timeRemaining / 1000 > 60) {
     console.log(`${time} ${period} left 🍅`);
   }
